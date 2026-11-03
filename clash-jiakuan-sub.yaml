@@ -1,0 +1,240 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+proxies:
+  - name: 家宽-US-01-24.249.199.4
+    type: socks5
+    server: 24.249.199.4
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-02-24.249.199.12
+    type: socks5
+    server: 24.249.199.12
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-03-72.194.42.131
+    type: socks5
+    server: 72.194.42.131
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-04-72.194.42.156
+    type: socks5
+    server: 72.194.42.156
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-05-70.166.167.38
+    type: socks5
+    server: 70.166.167.38
+    port: 57728
+    version: 4
+    udp: true
+  - name: 家宽-US-06-70.166.167.55
+    type: socks5
+    server: 70.166.167.55
+    port: 57745
+    version: 4
+    udp: true
+  - name: 家宽-US-07-72.207.109.5
+    type: socks5
+    server: 72.207.109.5
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-08-72.207.33.64
+    type: socks5
+    server: 72.207.33.64
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-09-68.1.210.163
+    type: socks5
+    server: 68.1.210.163
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-10-66.42.224.229
+    type: socks5
+    server: 66.42.224.229
+    port: 41679
+    version: 4
+    udp: true
+  - name: 家宽-US-11-69.61.200.104
+    type: socks5
+    server: 69.61.200.104
+    port: 36181
+    version: 4
+    udp: true
+  - name: 家宽-US-12-72.195.114.184
+    type: socks5
+    server: 72.195.114.184
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-13-72.49.49.11
+    type: socks5
+    server: 72.49.49.11
+    port: 31034
+    version: 4
+    udp: true
+  - name: 家宽-US-14-72.195.34.60
+    type: socks5
+    server: 72.195.34.60
+    port: 27391
+    version: 4
+    udp: true
+  - name: 家宽-US-15-72.195.34.42
+    type: socks5
+    server: 72.195.34.42
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-16-72.195.114.169
+    type: socks5
+    server: 72.195.114.169
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-17-98.190.239.3
+    type: socks5
+    server: 98.190.239.3
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-18-98.182.147.97
+    type: socks5
+    server: 98.182.147.97
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-19-98.178.72.21
+    type: socks5
+    server: 98.178.72.21
+    port: 10919
+    version: 4
+    udp: true
+  - name: 家宽-US-20-98.170.57.231
+    type: socks5
+    server: 98.170.57.231
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-21-98.188.47.150
+    type: socks5
+    server: 98.188.47.150
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-22-72.195.34.58
+    type: socks5
+    server: 72.195.34.58
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-23-98.191.0.47
+    type: socks5
+    server: 98.191.0.47
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-24-98.188.47.132
+    type: socks5
+    server: 98.188.47.132
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-25-98.170.57.249
+    type: socks5
+    server: 98.170.57.249
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-26-98.181.137.80
+    type: socks5
+    server: 98.181.137.80
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-US-27-70.166.65.160
+    type: socks5
+    server: 70.166.65.160
+    port: 4145
+    version: 4
+    udp: true
+  - name: 家宽-ID-28-103.109.3.110
+    type: http
+    server: 103.109.3.110
+    port: 8080
+proxy-groups:
+  - name: 家宽自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 100
+    proxies:
+      - 家宽-US-01-24.249.199.4
+      - 家宽-US-02-24.249.199.12
+      - 家宽-US-03-72.194.42.131
+      - 家宽-US-04-72.194.42.156
+      - 家宽-US-05-70.166.167.38
+      - 家宽-US-06-70.166.167.55
+      - 家宽-US-07-72.207.109.5
+      - 家宽-US-08-72.207.33.64
+      - 家宽-US-09-68.1.210.163
+      - 家宽-US-10-66.42.224.229
+      - 家宽-US-11-69.61.200.104
+      - 家宽-US-12-72.195.114.184
+      - 家宽-US-13-72.49.49.11
+      - 家宽-US-14-72.195.34.60
+      - 家宽-US-15-72.195.34.42
+      - 家宽-US-16-72.195.114.169
+      - 家宽-US-17-98.190.239.3
+      - 家宽-US-18-98.182.147.97
+      - 家宽-US-19-98.178.72.21
+      - 家宽-US-20-98.170.57.231
+      - 家宽-US-21-98.188.47.150
+      - 家宽-US-22-72.195.34.58
+      - 家宽-US-23-98.191.0.47
+      - 家宽-US-24-98.188.47.132
+      - 家宽-US-25-98.170.57.249
+      - 家宽-US-26-98.181.137.80
+      - 家宽-US-27-70.166.65.160
+      - 家宽-ID-28-103.109.3.110
+  - name: 家宽手动
+    type: select
+    proxies:
+      - 家宽自动
+      - 家宽-US-01-24.249.199.4
+      - 家宽-US-02-24.249.199.12
+      - 家宽-US-03-72.194.42.131
+      - 家宽-US-04-72.194.42.156
+      - 家宽-US-05-70.166.167.38
+      - 家宽-US-06-70.166.167.55
+      - 家宽-US-07-72.207.109.5
+      - 家宽-US-08-72.207.33.64
+      - 家宽-US-09-68.1.210.163
+      - 家宽-US-10-66.42.224.229
+      - 家宽-US-11-69.61.200.104
+      - 家宽-US-12-72.195.114.184
+      - 家宽-US-13-72.49.49.11
+      - 家宽-US-14-72.195.34.60
+      - 家宽-US-15-72.195.34.42
+      - 家宽-US-16-72.195.114.169
+      - 家宽-US-17-98.190.239.3
+      - 家宽-US-18-98.182.147.97
+      - 家宽-US-19-98.178.72.21
+      - 家宽-US-20-98.170.57.231
+      - 家宽-US-21-98.188.47.150
+      - 家宽-US-22-72.195.34.58
+      - 家宽-US-23-98.191.0.47
+      - 家宽-US-24-98.188.47.132
+      - 家宽-US-25-98.170.57.249
+      - 家宽-US-26-98.181.137.80
+      - 家宽-US-27-70.166.65.160
+      - 家宽-ID-28-103.109.3.110
+rules:
+  - MATCH,家宽手动
